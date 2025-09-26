@@ -38,7 +38,7 @@ class DistinctLimitStream extends Transform {
 	): void {
 		if (this._ended) {
 			// Ignore further chunks after ending
-			return callback();
+			return;
 		}
 
 		const key = this._getKey(chunk);
